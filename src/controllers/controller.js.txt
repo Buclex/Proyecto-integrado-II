@@ -1,0 +1,10 @@
+exports.getAll = (Model) => async (req, res) => {
+  const data = await Model.find();
+  res.json(data);
+};
+
+exports.create = (Model) => async (req, res) => {
+  const newItem = new Model(req.body);
+  await newItem.save();
+  res.status(201).json(newItem);
+};
