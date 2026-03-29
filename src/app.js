@@ -8,6 +8,7 @@ import directorRoutes from "./routes/director.routes.js";
 import productoraRoutes from "./routes/productora.routes.js";
 import tipoRoutes from "./routes/tipo.routes.js";
 import mediaRoutes from "./routes/media.routes.js";
+import loginRoutes from "./routes/login.routes.js";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use("/api/directores", directorRoutes);
 app.use("/api/productoras", productoraRoutes);
 app.use("/api/tipos", tipoRoutes);
 app.use("/api/medias", mediaRoutes);
+app.use("/api/login", loginRoutes);
 
 //img
 app.use("/uploads", express.static("uploads"));
